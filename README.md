@@ -1,2 +1,2 @@
-# BDA_FS19_Konzepte
+# BDA_FS19-Konzepte
 Erarbeitete Konzepte
