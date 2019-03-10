@@ -15,6 +15,18 @@ Die direkte Zielgruppe ist die Speicherbibliothek selbst. Diese könnte somit de
 Die Indirekte Zielgruppe währen demnach alle der Speicherbibliothek angeschlossenen Bibliotheken, sowie deren Kunden, welche Seiten bestimmter Exemplare als eingescannte Datei bestellen oder ausgewählte Exemplare mit einer Voranmeldung vor Ort lesen wollen.
 
 \chapter{Ideenbeschreibung}
+Momentan fährt der Roboter nur auf eine Position mit dem Behälter darauf. Diese fahrt wird durch die Software des Logistiksystems mitsamt des Roboters gesteuert. Neu soll die Software dieses Herstellers so erweitert werden (Siehe \ref{sec:roboterSWAnpassung}), dass der Roboter einen vordefinierten Pfad abfährt mit einem Spezifischen RFID Lesebehälter/Suchbehälter (Siehe \ref{sec:behaelterMitRFID}) und dabei noch Aktionen ausführt, wie einen Behälter für Kurze Zeit auszutauschen.
+Würde nun ein Buch, welches von einer Bibliothek oder einem anderen Kunden bestellt wurde, nicht im Entsprechenden Behälter zu finden sein, soll neu der Spezielle RFID Lese-/Suchbehälter in das Hochregallager geschickt werden.
+
+
+Dabei gibt es 2 Unterschiedliche Suchvorkehrungen. Als erstes würde der Roboter mit dem Lese-/Suchbehälter in alle Gassen geschickt, wo Roboter durch jede Reihe nacheinander fährt. Dabei wird jeweils vom Lese-/Suchbehälter der Vordere Behälter nach dem fehlenden Exemplar abgesucht. So kann in einer Kurzer Zeit ca. 50\% des Lagers nach dem deplatzierten Exemplar abgesucht werden. Würde nach diesem Suchvorgang die Lokalisation des Exemplares nicht erfolgreich abgeschlossen werden, würde in der Nacht die 2 Suchfunktion starten, bei welcher der Lese-/Suchbehälter im Hochregallager in der Höhe jeden dritten Platz eines äusseren bereits abgesuchten Behälters für eine kurze Zeit tauscht. Während der Lese-/Suchbehälter am äusseren Platzt ist sucht er im hinteren Behälter nach dem Exemplar sowie in den zu dem abgesuchten behälter direkt darüber sowie darunter befindlichen Behälter.
+
+\section{Anpassungen Lagerverwaltungssoftware}
+\label{sec:roboterSWAnpassung}
+Für die Software der Lagerverwaltung soll die Herstellerfirma dieser Softer diese um eine Schnittelle erweitern, welche es ermöglicht über das Netzwerk neue Fahrpositionsdaten mitzuteilen, zu welchen der Roboter anschliessend fährt. Es soll dabei möglich sein dem Roboter zu sagen, ob er einen Behälter Tauschen soll oder nur an deren Position zu fahren. Zudem soll die momentane Position des Roboters über diese Schnittelle abgefragt werden können. 
+
+\section{Behälter mit RFID Ausrüstung}
+\label{sec:behaelterMitRFID}
 
 
 Momentan fährt der Roboter nur die im System hinterlegte Position des Behälters an. Diese Fahrt wird durch die Software des Logistiksystems mitsamt des Roboters gesteuert. Neu soll die Software dieses Herstellers so erweitert werden (Siehe \ref{sec:roboterSWAnpassung}), dass der Roboter einen vordefinierten Pfad abfährt mit einem speziellen RFID Lesebehälter/Suchbehälter (Siehe \ref{sec:behaelterMitRFID}) und dabei noch Aktionen ausführt, wie die temporäre Einlagerung dieses Behälters und Zwischenlagerung des Behälters welcher sich an der eingelagerten Stelle befand.
