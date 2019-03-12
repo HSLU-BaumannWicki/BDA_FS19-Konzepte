@@ -15,6 +15,45 @@ Die generelle Idee dieses Konzepts ist eine Station in das Förderband zu integr
 
 \section{Position}
 
+\subsection{Rüstplatz}
+Da der Behälter während dem Entnehmen und Abfüllen des Behälters vergleichsweise lang stillsteht, hätte man an dieser Stelle sicher genug Zeit alle RFID Tags auszulesen. Mögliche Nachteile sind Platzmangel und Interferenzen durch Exemplare welche nicht im Behälter sind aber fälschlicherweise auch erfasst werden, da sie in der Nähe liegen.
+\begin{itemize}
+	\pro Genügend Zeit für das Auslesen aller Tags
+	\pro Früh im Prozess für eine Meldung
+	\con Interferenzen durch RFID markierte Exemplare in der Nähe
+	\item Eventuell kein Platz für Antennen
+	\item Eventuell Abschirmung/Justierung der Antennen möglich, sodass nur Exemplare im Behälter ausgelesen werden
+\end{itemize}
+
+\subsection{In einer Eckpartie}
+Der Behälter führt auf dem Band zwei Rechtsdrehungen für einen Gesamtwinkel von \SI{180}{\degree} durch. An diesem Punkt bleibt der Behälter verhältnismässig lange in einem Bereich welcher von der Antenne abgedeckt werden sollte. Weiter befinden sich an dieser Position keine andere Exemplare oder Messstationen in der Nähe, was Interferenz verunmöglichen sollte.
+\begin{itemize}
+	\pro \textasciitilde drei Sekunden für das Auslesen der Tags zur Verfügung
+	\pro Keine Interferenzen zu erwarten
+	\con Nur beschränktes Zeitfenster
+	\con Behälter in Bewegung
+\end{itemize}
+
+\subsection{Waage}
+Der Behälter wird zur Bestimmung von Übergewicht gewogen, an dieser Stelle bleibt dieser etwa eine Sekunde an Ort und Stelle.
+\begin{itemize}
+	\pro Behälter bleibt an Ort und Stelle
+	\pro Keine Interferenzen zu erwarten
+	\con Nur beschränktes Zeitfenster
+	\con Antenne kann nicht beliebig montiert werden
+\end{itemize}
+
+\subsection{Lift}
+Der Behälter fährt vor Übergabe in das Hochregallager in einem Lift vertikal nach unten. Während dieser Zeit bleibt er längere Zeit still.
+\begin{itemize}
+	\pro Behälter bleibt an Ort und Stelle
+	\pro Grosses Zeitfenster
+	\con Beschränkter Platz da Lift
+	\con Spät im Prozess
+	\item Eventuell Interferenzen durch Liftmotoren
+	\item Aussortierung eventuell nicht möglich
+\end{itemize}
+
 \section{Identifikation der RFID Tags}
 
 \section{Identifikation des Behälters}
