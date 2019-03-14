@@ -1,5 +1,3 @@
-Hier soll etwas stehen
-
 \chapter{Strategie}
 Um die Ausgangslage zu verbessern können verschiedene Ansätzte gewählt werden. In diesem Konzept wird vorallem
 
@@ -19,7 +17,7 @@ Momentan fährt der Roboter nur auf eine Position mit dem Behälter darauf. Dies
 Würde nun ein Buch, welches von einer Bibliothek oder einem anderen Kunden bestellt wurde, nicht im Entsprechenden Behälter zu finden sein, soll neu der Spezielle RFID Lese-/Suchbehälter in das Hochregallager geschickt werden.
 
 
-Dabei gibt es 2 Unterschiedliche Suchvorkehrungen. Als erstes würde der Roboter mit dem Lese-/Suchbehälter in alle Gassen geschickt, wo Roboter durch jede Reihe nacheinander fährt. Dabei wird jeweils vom Lese-/Suchbehälter der Vordere Behälter nach dem fehlenden Exemplar abgesucht. So kann in einer Kurzer Zeit ca. 50\% des Lagers nach dem deplatzierten Exemplar abgesucht werden. Würde nach diesem Suchvorgang die Lokalisation des Exemplares nicht erfolgreich abgeschlossen werden, würde in der Nacht die 2 Suchfunktion starten, bei welcher der Lese-/Suchbehälter im Hochregallager in der Höhe jeden dritten Platz eines äusseren bereits abgesuchten Behälters für eine kurze Zeit tauscht. Während der Lese-/Suchbehälter am äusseren Platzt ist sucht er im hinteren Behälter nach dem Exemplar sowie in den zu dem abgesuchten behälter direkt darüber sowie darunter befindlichen Behälter.
+Dabei gibt es zwei Unterschiedliche Suchvorkehrungen. Als erstes würde der Roboter mit dem Lese-/Suchbehälter in alle Gassen geschickt, wo Roboter durch jede Reihe nacheinander fährt. Dabei wird jeweils vom Lese-/Suchbehälter der Vordere Behälter nach dem fehlenden Exemplar abgesucht. So kann in einer Kurzer Zeit ca. 50\% des Lagers nach dem deplatzierten Exemplar abgesucht werden. Würde nach diesem Suchvorgang die Lokalisation des Exemplares nicht erfolgreich abgeschlossen werden, würde in der Nacht die zweite Suchfunktion starten, bei welcher der Lese-/Suchbehälter im Hochregallager in der Höhe jeden dritten Platz eines äusseren bereits abgesuchten Behälters für eine kurze Zeit tauscht. Während der Lese-/Suchbehälter am äusseren Platzt ist sucht er im hinteren Behälter nach dem Exemplar sowie in den zu dem abgesuchten behälter direkt darüber sowie darunter befindlichen Behälter.
 
 \section{Anpassungen Lagerverwaltungssoftware}
 \label{sec:roboterSWAnpassung}
@@ -63,5 +61,64 @@ In der Abbildung \ref{fig:distanzcalc} wird dargestellt, dass alle äussere Beh�
 \chapter{Zeitplan}
 
 \chapter{Finanzierungsplan}
+\section{Lese-/Suchbehälter}
+Die Daten von Feig wurden von Euro auf CHF umgerechnet (Wechselkurs 1.14). Zudem sind es die Kosten, welche man Zahlt würde ein 100er Stapel gekauft werden.
+
+\begin{tabularx}{\textwidth}{|r|X|r|r|}
+	\hline 
+	\textbf{Menge} & \textbf{Produkt} & \textbf{Kosten(CHF)} & \textbf{Kosten gesamt(CHF)} \\
+	\hline 
+	1 & RFID Reader ID ISC.LR2500-A (Feig) & 1'200 & 1'200 \\ 
+	\hline 
+	2 & RFID Multiplexer 8-fach HF Multiplexer (Feig) & 1'000 & 2'000 \\ 
+	\hline 
+	14 & RFID Antennen ID ISC.ANT800/600 (Feig)& 760 & 10'640 \\
+	\hline
+	14 & RFID Antennenkabel ID ISC.ANT.C-A (Feig) & 20 & 280 \\
+	\hline
+	1 & Netzteil ID NET.24V-B (Feig) & 30 & 30 \\
+	\hline
+	1 & Netzkabel ID CAB.NET.24V-B-EU (Feig) & 4 & 4 \\
+	\hline
+	1 & Behälter 986417 (Kaiserkraft) & 39 & 39 \\
+	\hline
+	& & & \textbf{14'193} \\
+	\hline
+\end{tabularx} 
+\section{Umbau Roboter SW}
+Basierend auf den Stundenkosten der Firma bbv Software Services AG wurde die folgende Approximation errechnet.
+Die Stunden für die Umsetzung basieren auf Annahmen.
+
+\begin{tabularx}{\textwidth}{|r|r|X|r|}
+	\hline 
+	\textbf{Stunden(h)} & \textbf{Lohn(CHF/h)} & \textbf{Beschrieb} & \textbf{Kosten gesamt(CHF)} \\
+	\hline 
+	50 & 180 & Umsetzung, sofern die Software die Befehle bereits über das Netztwerk entgegennimmt. & 9'000 \\
+	\hline
+	200 & 180 & Umsetzung, sofern die Software komplexere Anpassung benötigt & 36'000 \\
+	\hline
+	8 & 200 & Allgemeine RE und weitere Kosten & 1'600 \\
+	\hline	
+	& & & \textbf{10'600 bis 37'600} \\ 
+	\hline
+\end{tabularx}
+\\
+Die Gesamtkosten können also zwischen 10'600.- und 37'600.- schwanken. Wobei diese Werte auf zwei Approximationen beruhen, und somit für deren Einhalt nicht garantiert werden kann.
+
+\section{Gesamt Rechnung}
+\begin{tabularx}{\textwidth}{|X|r|}
+	\hline
+	\textbf{Beschreibung} & \textbf{Kosten (CHF)} \\
+	\hline
+	RFID Lese-/Suchbehälter & 14'193 \\
+	\hline
+	Umbau Roboter SW & 10'600 bis 37'600 \\
+	\hline
+	Weitere BDA für Implementation & 1'000 \\
+	\hline
+	& \textbf{25'793 bis 52'793} \\
+	\hline
+\end{tabularx}
+
 
 \chapter{Dokumentation und Evaluation}
