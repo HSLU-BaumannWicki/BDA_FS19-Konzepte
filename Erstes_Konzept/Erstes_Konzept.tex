@@ -40,6 +40,52 @@ In der Abbildung \ref{fig:distanzcalc} wird dargestellt, dass alle äussere Beh�
 	\label{fig:distanzcalc}
 \end{figure}
 
+Mangels Hardwarehersteller, welche 1m Lesereichweite aufweisen müssen die Komponenten von Feig Electronic verwendet werden:
+\begin{itemize}
+	\item RFID Leser ID ISC.LR2500-A
+	\item RFID Antennen ID ISC.ANT800/600
+	\item RFID Antennenkabel ID ISC.ANT.C-A
+	\item RFID 8xMultiplexer ID ISC.ANT.MUX
+	\item Netzteil ID NET.24V-B
+	\item Stromkabel ID CAB.NET.24V-B-EU
+\end{itemize}
+
+\clearpage
+\section{Computer im Behälter}
+Das RFID Lesegerät soll über einen kleinen im Behälter sich befindenden Mini-Computer gesteuert werden. Dieser Computer soll über das bestehende Wlan Netzwerk auf die Datenbank zugreifen um die von RFID gescannten Behälter anhand der momentane Position zu Identifizieren.  
+Zudem soll die Fahrt des Roboter von diesem Minicomputer mittels den Anpassungen aus Kapitel  \ref{sec:roboterSWAnpassung} die fahrt des Roboters indirekt steuern.
+
+Um diese Aufgabe zu übernehmen, soll ein Raspberry Pi verwendet werden.
+
+\section{Kommunikation zum User}
+Der User soll auf einem Stationären Computer wichtige Informationen wie etwa die Dauer, den Fortschritt oder ob das zu suchende Exemplar bereits gefunden wurde Informiert werden. Stationär bedeutet hier, dass es sich nicht um den Computer, welcher im Behälter ist, handelt.
+
+\section{Stromzufuhr}
+Für die Komplette Stromversorgung soll ein Akku in dem Behälter verbaut werden, welcher genügend Kappazität für einen 10h betrieb aufweist.
+
+Der Stromverbrauch des RFID Lesers beträgt 35W bei 24V, das entspricht 1'458.32 mAh.
+Der Stromverbrauch des Raspberry PI betragt 4W bei 5v, das entspricht 800mAh.
+Es wird ein Akku mit einer Kapazität von mindestens 2'258.32 mAh für eine Betriebsdauer von 1h benötigt. Um eine Betriebsdauer von 10h zu gewährleisten benötigt der Akku eine gesamtkapazität von 22'583.32 mAh.
+Weiter hat er noch folgende Anforderungen.
+\begin{itemize}
+	\item USB Anschluss
+	\item CH Wechselstromanschluss
+	\item Geringes Gewicht
+\end{itemize}
+
+\section{Hardwarekomponenten Übersicht}
+Es sollen folgende Komponenten verwendet werden:
+\begin{itemize}
+	\item RFID Leser ID ISC.LR2500-A  (Feig)
+	\item RFID Antennen ID ISC.ANT800/600 (Feig)
+	\item RFID Antennenkabel ID ISC.ANT.C-A (Feig)
+	\item Netzteil für Leser ID NET.24V-B (Feig)
+	\item Netzkabel für Netzteil ID CAB.NET.24V-B-EU  (Feig)
+	\item Minicomputer Raspberry PI 3 Model B + (Raspberry PI)
+	\item USB-Kabel für Minicomputer Aukey CB-D11 (Aukey)
+	\item Akku Goal Zero Yeti 400 Lithium (Goal Zero)
+\end{itemize}
+
 \chapter{Zeitplan}
 
 \chapter{Finanzierungsplan}
