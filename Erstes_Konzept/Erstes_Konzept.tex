@@ -13,20 +13,6 @@ Die direkte Zielgruppe ist die Speicherbibliothek selbst. Diese könnte somit de
 Die Indirekte Zielgruppe währen demnach alle der Speicherbibliothek angeschlossenen Bibliotheken, sowie deren Kunden, welche Seiten bestimmter Exemplare als eingescannte Datei bestellen oder ausgewählte Exemplare mit einer Voranmeldung vor Ort lesen wollen.
 
 \chapter{Ideenbeschreibung}
-Momentan fährt der Roboter nur auf eine Position mit dem Behälter darauf. Diese fahrt wird durch die Software des Logistiksystems mitsamt des Roboters gesteuert. Neu soll die Software dieses Herstellers so erweitert werden (Siehe \ref{sec:roboterSWAnpassung}), dass der Roboter einen vordefinierten Pfad abfährt mit einem Spezifischen RFID Lesebehälter/Suchbehälter (Siehe \ref{sec:behaelterMitRFID}) und dabei noch Aktionen ausführt, wie einen Behälter für Kurze Zeit auszutauschen.
-Würde nun ein Buch, welches von einer Bibliothek oder einem anderen Kunden bestellt wurde, nicht im Entsprechenden Behälter zu finden sein, soll neu der Spezielle RFID Lese-/Suchbehälter in das Hochregallager geschickt werden.
-
-
-Dabei gibt es zwei Unterschiedliche Suchvorkehrungen. Als erstes würde der Roboter mit dem Lese-/Suchbehälter in alle Gassen geschickt, wo Roboter durch jede Reihe nacheinander fährt. Dabei wird jeweils vom Lese-/Suchbehälter der Vordere Behälter nach dem fehlenden Exemplar abgesucht. So kann in einer Kurzer Zeit ca. 50\% des Lagers nach dem deplatzierten Exemplar abgesucht werden. Würde nach diesem Suchvorgang die Lokalisation des Exemplares nicht erfolgreich abgeschlossen werden, würde in der Nacht die zweite Suchfunktion starten, bei welcher der Lese-/Suchbehälter im Hochregallager in der Höhe jeden dritten Platz eines äusseren bereits abgesuchten Behälters für eine kurze Zeit tauscht. Während der Lese-/Suchbehälter am äusseren Platzt ist sucht er im hinteren Behälter nach dem Exemplar sowie in den zu dem abgesuchten behälter direkt darüber sowie darunter befindlichen Behälter.
-
-\section{Anpassungen Lagerverwaltungssoftware}
-\label{sec:roboterSWAnpassung}
-Für die Software der Lagerverwaltung soll die Herstellerfirma dieser Softer diese um eine Schnittelle erweitern, welche es ermöglicht über das Netzwerk neue Fahrpositionsdaten mitzuteilen, zu welchen der Roboter anschliessend fährt. Es soll dabei möglich sein dem Roboter zu sagen, ob er einen Behälter Tauschen soll oder nur an deren Position zu fahren. Zudem soll die momentane Position des Roboters über diese Schnittelle abgefragt werden können. 
-
-\section{Behälter mit RFID Ausrüstung}
-\label{sec:behaelterMitRFID}
-
-
 Momentan fährt der Roboter nur die im System hinterlegte Position des Behälters an. Diese Fahrt wird durch die Software des Logistiksystems mitsamt des Roboters gesteuert. Neu soll die Software dieses Herstellers so erweitert werden (Siehe \ref{sec:roboterSWAnpassung}), dass der Roboter einen vordefinierten Pfad abfährt mit einem speziellen RFID Lesebehälter/Suchbehälter (Siehe \ref{sec:behaelterMitRFID}) und dabei noch Aktionen ausführt, wie die temporäre Einlagerung dieses Behälters und Zwischenlagerung des Behälters welcher sich an der eingelagerten Stelle befand.
 Würde nun ein Buch, welches von einer Bibliothek oder einem anderen Kunden bestellt wurde, nicht im entsprechenden Behälter zu finden sein, soll neu der spezielle RFID Lese-/Suchbehälter in das Hochregallager geschickt werden.
 
@@ -128,9 +114,9 @@ Die Gesamtkosten können also zwischen 10'600.- und 37'600.- schwanken. Wobei di
 \end{tabularx}
 
 \section{Kosten Manuelle Suche}
-Würde ein Exemplar deplatziert werden, würde eine Aufwändige suche beginnen, welche bei ca. 3 Millionen Exemplaren seine Zeit benötigen. Würde es theoretisch möglich sein ein Exemplar pro Sekunde zu durchsuchen bräuchte man etwa drei Millionen Sekunden. Dies entspricht 50'000 Minuten oder 833.32 Stunden oder 104.17 Arbeitstage à 8h oder knapp 5 Monaten. Würde diese Arbeit von einer Student*in mit einem Stundenlohn von etwa 20 CHF durchgeführt, könnte diese Suche bis zu 16'666.67 CHF kosten. Würde die Suche von einem Arbeiter der Speicherbibliothek übernommen werden, könnten die Kosten noch höher ausfallen.
+Würde ein Exemplar deplatziert werden, würde eine aufwendige Suche beginnen, welche bei etwa drei Millionen Exemplaren viel Zeit benötigt. Würde es theoretisch möglich sein ein Exemplar pro Sekunde zu durchsuchen bräuchte man etwa drei Millionen Sekunden. Dies entspricht 50'000 Minuten oder 833.32 Stunden oder 104.17 Arbeitstage à 8h oder knapp 5 Monaten. Würde diese Arbeit von einer Student*in mit einem Stundenlohn von etwa 20 CHF durchgeführt, könnte diese Suche bis zu 16'666.67 CHF kosten. Würde die Suche von einem Arbeiter der Speicherbibliothek übernommen werden, würden die Kosten noch höher ausfallen.
 
-Die Kosten von 52'888 würden nach gut 3 Suchvorgängen die Kosten der Manuellen Suche eingeholt haben. Zusätzliche gäbe es einen Zeitgewinn von knapp 103 Arbeitstagen, da die Suche der Exemplare nach 1 Tag abgeschlossen ist.
+Die Kosten von 52'888 würden nach gut drei Suchvorgängen die Kosten der manuellen Suche eingeholt haben. Zusätzliche gäbe es einen Zeitgewinn von knapp 103 Arbeitstagen, da die Suche der Exemplare nach einem Tag abgeschlossen ist.
 
 
 \chapter{Dokumentation und Evaluation}
