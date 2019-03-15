@@ -1,5 +1,3 @@
-Hier soll etwas stehen
-
 \chapter{Strategie}
 Um die Ausgangslage zu verbessern können verschiedene Ansätzte gewählt werden. In diesem Konzept wird vorallem
 
@@ -15,8 +13,6 @@ Die direkte Zielgruppe ist die Speicherbibliothek selbst. Diese könnte somit de
 Die Indirekte Zielgruppe währen demnach alle der Speicherbibliothek angeschlossenen Bibliotheken, sowie deren Kunden, welche Seiten bestimmter Exemplare als eingescannte Datei bestellen oder ausgewählte Exemplare mit einer Voranmeldung vor Ort lesen wollen.
 
 \chapter{Ideenbeschreibung}
-
-
 Momentan fährt der Roboter nur die im System hinterlegte Position des Behälters an. Diese Fahrt wird durch die Software des Logistiksystems mitsamt des Roboters gesteuert. Neu soll die Software dieses Herstellers so erweitert werden (Siehe \ref{sec:roboterSWAnpassung}), dass der Roboter einen vordefinierten Pfad abfährt mit einem speziellen RFID Lesebehälter/Suchbehälter (Siehe \ref{sec:behaelterMitRFID}) und dabei noch Aktionen ausführt, wie die temporäre Einlagerung dieses Behälters und Zwischenlagerung des Behälters welcher sich an der eingelagerten Stelle befand.
 Würde nun ein Buch, welches von einer Bibliothek oder einem anderen Kunden bestellt wurde, nicht im entsprechenden Behälter zu finden sein, soll neu der spezielle RFID Lese-/Suchbehälter in das Hochregallager geschickt werden.
 
@@ -39,7 +35,7 @@ Die Antennen sollen gemäss Abbildung \ref{fig:antennenPositionen} ausgerichtet 
 	\label{fig:antennenPositionen}
 \end{figure}
 
-In der Abbildung \ref{fig:distanzcalc} wird dargestellt, dass alle äussere Behälter noch innerhalb der von HF RFID möglichen Lesedistanz von unter 1m liegen.
+In der Abbildung \ref{fig:distanzcalc} wird dargestellt, dass alle äusseren Behälter noch innerhalb der von HF RFID möglichen Lesedistanz von unter 1m liegen.
 
 \begin{figure}
 	\centering
@@ -97,5 +93,76 @@ Es sollen folgende Komponenten verwendet werden:
 \chapter{Zeitplan}
 
 \chapter{Finanzierungsplan}
+\section{Kosten}
+\subsection{Lese-/Suchbehälter}
+Die Einzelpreise von Feig sind gleichwertig zu einer Bestellung eines 100er Stapels und wurden von Euro in Schweizer Franken umgerechnet (Wechselkurs 1.14).
+
+\begin{tabularx}{\textwidth}{|r|X|r|r|}
+	\hline 
+	\textbf{Menge} & \textbf{Produkt} & \textbf{Kosten(CHF)} & \textbf{Kosten gesamt(CHF)} \\
+	\hline 
+	1 & RFID Reader ID ISC.LR2500-A (Feig) & 1'200 & 1'200 \\ 
+	\hline 
+	2 & RFID Multiplexer 8-fach HF Multiplexer (Feig) & 500 & 1'000 \\ 
+	\hline 
+	14 & RFID Antennen ID ISC.ANT800/600 (Feig)& 760 & 10'640 \\
+	\hline
+	16 & RFID Antennenkabel ID ISC.ANT.C-A (Feig) & 20 & 320 \\
+	\hline
+	1 & Netzteil ID NET.24V-B (Feig) & 30 & 30 \\
+	\hline
+	1 & Netzkabel ID CAB.NET.24V-B-EU (Feig) & 4 & 4 \\
+	\hline
+	1 & Rapberry PI 3 Model B+ & 40 & 40 \\
+	\hline
+	1 & SB-Kabel für Minicomputer Aukey CB-D11 (Aukey) & 15 & 15 \\
+	\hline
+	1 & Akku Goal Zero Yeti 400 Lithium (Goal Zero) & 1'000 & 1'000 \\
+	\hline
+	1 & Behälter 986417 (Kaiserkraft) & 39 & 39 \\
+	\hline
+	& & & \textbf{14'288} \\
+	\hline
+\end{tabularx} 
+\subsection{Umbau Roboter SW}
+Basierend auf den Stundenkosten der Firma bbv Software Services AG wurde die folgende Approximation errechnet.
+Die Stunden für die Umsetzung basieren auf Annahmen.
+
+\begin{tabularx}{\textwidth}{|r|r|X|r|}
+	\hline 
+	\textbf{Stunden(h)} & \textbf{Lohn(CHF/h)} & \textbf{Beschrieb} & \textbf{Kosten gesamt(CHF)} \\
+	\hline 
+	50 & 180 & Umsetzung, sofern die Software die Befehle bereits über das Netztwerk entgegennimmt. & 9'000 \\
+	\hline
+	200 & 180 & Umsetzung, sofern die Software komplexere Anpassung benötigt & 36'000 \\
+	\hline
+	8 & 200 & Allgemeine RE und weitere Kosten & 1'600 \\
+	\hline	
+	& & & \textbf{10'600 bis 37'600} \\ 
+	\hline
+\end{tabularx}
+\\
+Die Gesamtkosten können also zwischen 10'600.- und 37'600.- schwanken. Wobei diese Werte auf zwei Approximationen beruhen, und somit für deren Einhalt nicht garantiert werden kann.
+
+\subsection{Gesamt Rechnung}
+\begin{tabularx}{\textwidth}{|X|r|}
+	\hline
+	\textbf{Beschreibung} & \textbf{Kosten (CHF)} \\
+	\hline
+	RFID Lese-/Suchbehälter & 14'288 \\
+	\hline
+	Umbau Roboter SW & 10'600 bis 37'600 \\
+	\hline
+	Weitere BDA für Implementation & 1'000 \\
+	\hline
+	& \textbf{25'888 bis 52'888} \\
+	\hline
+\end{tabularx}
+
+\section{Kosten Manuelle Suche}
+Würde ein Exemplar deplatziert werden, würde eine aufwendige Suche beginnen, welche bei etwa drei Millionen Exemplaren viel Zeit benötigt. Würde es theoretisch möglich sein ein Exemplar pro Sekunde zu durchsuchen bräuchte man etwa drei Millionen Sekunden. Dies entspricht 50'000 Minuten oder 833.32 Stunden oder 104.17 Arbeitstage à 8h oder knapp 5 Monaten. Würde diese Arbeit von einer Student*in mit einem Stundenlohn von etwa 20 CHF durchgeführt, könnte diese Suche bis zu 16'666.67 CHF kosten. Würde die Suche von einem Arbeiter der Speicherbibliothek übernommen werden, würden die Kosten noch höher ausfallen.
+
+Die Kosten von 52'888 würden nach gut drei Suchvorgängen die Kosten der manuellen Suche eingeholt haben. Zusätzliche gäbe es einen Zeitgewinn von knapp 103 Arbeitstagen, da die Suche der Exemplare nach einem Tag abgeschlossen ist.
+
 
 \chapter{Dokumentation und Evaluation}
