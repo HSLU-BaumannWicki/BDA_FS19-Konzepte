@@ -128,6 +128,25 @@ Man könnte, sobald ein fehlplatziertes Exemplar erkannt wurde, ein Bericht an d
 	\con Schnittstelle zu Meldesoftware nötig
 \end{itemize}
 
+\newpage
+
+\section{Morphologischer Kasten und Variantenbeschreibung}
+
+\begin{figure}[h!]
+	\includegraphics[keepaspectratio,width=\linewidth]{Morphologischer_Kasten}
+	\caption{Die Varianten als Pfade dargestellt}
+	\label{fig:MorphKasten}
+\end{figure}
+
+\subsection{Variante 1: Früherkennung und Aussortierung (Rot)}
+In dieser Variante wurde Wert darauf gelegt, möglichst wenig Interferenzen zu haben, daher wurde sich für eine Antenne entschieden. Es soll über die Mehrheit der Tags der aktuelle Behälter bestimmt werden, und falls Tags eines anderen Behälters gefunden wurde, der Behälter nicht eingelagert, sondern aussortiert werden (sprich ein Steuerungssignal an das Förderband gegeben werden). Der Ort wurde ausgewählt, da der Behälter dort eine kurze Pause einlegt. Diese Variante hängt stark davon ab wie schnell und fehlerfrei Tags ausgelesen werden können, und ob eine Schnittstelle zur Steuersoftware existiert die wir nutzen können.
+
+\subsection{Variante 2: Weitflächige Erkennung und Aussortierung (Grün)}
+Es soll durch mehrere Antennen eine grössere Abdeckung erreicht werden, und so sichergestellt werden, dass alle Tags ausgelesen werden können. Auch bei dieser Variante soll der Behälter über die Mehrheit der Tags ausgelesen werden, und dieser, wenn nötig, aussortiert werden.
+
+\subsection{Variante 3: Erkennung und Signalisierung (Blau)}
+Bei dieser Variante soll der Leser bei der Warteposition vor der Einlagerung positioniert werden, da dort die Behälter ein paar Sekunden verbleiben. Danach sollen die erkannten Tags und der Behälter als Mitteilung an die Arbeitsstation geschickt werden (Mail, Middleware, Signallampe). Das mögliche Problem dieser Variante ist, dass zwei Behälter nebeneinander in der Warteposition sein können, und dadurch allenfalls Falschpositive generiert werden können..
+
 \chapter{Finanzierungsplan}
 
 Als Berechnungsgrundlage wird ein Konzept mit einer Antenne und einer Steuerung über das Netzwerk gerechnet. Die Daten von Feig wurden von Euro auf CHF umgerechnet (Wechselkurs 1.14). Zudem sind dies die Demopreise für einen Prototypen.
@@ -151,8 +170,6 @@ Als Berechnungsgrundlage wird ein Konzept mit einer Antenne und einer Steuerung 
 	1 & Raspberry Pi 3 Model B+ (pi-shop.ch)& 39 & 39 \\
 	\hline
 	1 & Sandisk Extreme 128GB Class 10 (digitec.ch)& 45 & 45 \\
-	\hline
-	200 & HF Inlay Tag \footnote{\href{https://ades.ch/produktepalette/etiketten/rfid-etiketten/high-frequency-inlays/}{Richtpreis ades Schweiz High Frequency Inlays}} & 0.15 & 30 \\
 	\hline
 	& & & \textbf{2098} \\
 	\hline
