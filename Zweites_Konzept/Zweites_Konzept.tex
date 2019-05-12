@@ -79,8 +79,16 @@ Der Behälter fährt vor Übergabe in das Hochregallager in einem Lift vertikal 
 
 \begin{figure}
 	\centering
-	\includegraphics[keepaspectratio]{Position_Antenne}
+	\includegraphics[keepaspectratio,width=\textwidth]{Position_Antennen}
 	\caption{Positionierung einer Antenne über Förderband}
+	\label{fig:PosAntennen}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[keepaspectratio,width=\textwidth]{Lagerung_Exemplare}
+	\caption{Arten wie die Exemplare in Behältern gelagert werden}
+	\label{fig:LagExemplare}
 \end{figure}
 
 \section{Identifikation des Behälters}
@@ -88,7 +96,7 @@ Der Behälter fährt vor Übergabe in das Hochregallager in einem Lift vertikal 
 \subsection{Barcodeleser}
 An jedem Behälter ist ein Barcode aufgeklebt (auf beiden Seiten jeweils an der richtigen Stelle, sodass die Position durch eine Drehung überführt werden kann). Durch Auslesen dieses Strichcodes ist eine Eindeutige Identifikation des Behälters möglich.
 \begin{itemize}
-	\pro Behälter eindeutig Identifiziert
+	\pro Behälter eindeutig identifiziert
 	\pro Keine Abhängigkeiten
 	\con Position muss stimmen, dass Barcode gelesen werden kann
 \end{itemize}
@@ -149,7 +157,7 @@ Bei dieser Variante soll der Leser bei der Warteposition vor der Einlagerung pos
 
 \section{Wahl der Variante}
 
-Das Projektteam empfiehlt die Variante Eins, da bei dieser von wenig Interferenz ausgegangen werden kann, weil sich nur ein Behälter im Lesebereich der Antenne befindet. Weiter besteht an dieser Position auch die Möglichkeit den Behälter noch auszusortieren. Vor allem aus diesen Gründen bevorzugen wir die erste Variante.
+Das Projektteam empfiehlt Variante Zwei, da in den Versuchen die Wichtigkeit der Ausrichtung der Tags festgestellt wurden. Daher werden zwei Antennen verwendet und wie in Abbildung \ref{fig:PosAntennen} dargestellt, damit die zwei Varianten der Bücherlagerung (in Abbildung \ref{fig:LagExemplare} dargestellt) gelesen werden können. Die Aussortierung wird empfohlen, damit der Prozess voll autonom geschieht.
 
 \subsection{Übersicht der Hardwarekomponenten}
 Es sollen folgende Komponenten verwendet werden:
